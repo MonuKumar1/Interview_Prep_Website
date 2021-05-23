@@ -1,0 +1,132 @@
+
+
+<%- include('partials/boot-header') %>
+	<div>
+
+
+		<script>
+			const role = document.getElementById("role");
+			// console.log();
+			if (role) {
+				if (role.innerText == "ADMIN") {
+					document.getElementById("role").classList.replace('abtn', 'bbtn');
+					document.getElementById("role").outerHTML = document.getElementById("role").outerHTML.replace(/span/g, "a");
+					document.getElementById("role").setAttribute('href', "/admin");
+				}
+			}
+
+		</script>
+
+	</div>
+
+
+	<body>
+	
+		<div class="limiter">
+			<div class="container-login100">
+				<div class="wrap-login100">
+					<div class="login100-form-title" style="background-image: url(/login2/images/bg-01.jpg);">
+						<span class="login100-form-title-1">
+							Sign In
+						</span>
+					</div>
+	
+					<form class="login100-form validate-form">
+						<div class="wrap-input100  m-b-26">
+							<span class="label-input100">Email</span>
+							<input class="input100" type="text" name="email" placeholder="Enter email">
+							<span class="focus-input100"></span>
+							<div class="email error"></div>
+						</div>
+	
+						<div class="wrap-input100 m-b-18">
+							<span class="label-input100">Password</span>
+							<input class="input100" type="password" name="password" placeholder="Enter password">
+							<span class="focus-input100"></span>
+							<div class="password error"></div>
+						</div>
+	
+						<div class="flex-sb-m w-full p-b-30">
+							<div class="txt1">
+								Don't have an account? <a href="/signup" class="txt2"
+									style="color:#1192dd ; font-size: medium;">Create One</a>
+							</div>
+	
+							<!-- <div>
+								<a href="#" class="txt1">
+									Forgot Password?
+								</a>
+							</div> -->
+						</div>
+	
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn" style="margin-top: 20px;">
+								Login
+							</button>
+						</div>
+	
+	
+	
+					</form>
+				</div>
+			</div>
+		</div>
+	
+		<script>
+			const form = document.querySelector('form');
+			const emailError = document.querySelector('.email.error');
+			const passwordError = document.querySelector('.password.error');
+			// const emailError = document.getElementsByClassName("m-b-26")[0].dataset.validate
+			// const passwordError = document.getElementsByClassName("m-b-18")[0].dataset.validate
+
+
+			form.addEventListener('submit', async (e) => {
+				e.preventDefault();
+
+				emailError.textContent = '';
+				passwordError.textContent = '';
+
+				const email = form.email.value;
+				const password = form.password.value;
+
+				try {
+					const res = await fetch('/login', {
+						method: 'POST',
+						body: JSON.stringify({ email, password }),
+						headers: { 'Content-Type': 'application/json' }
+					});
+
+					const data = await res.json();
+					if (data.errors) {
+						emailError.textContent = data.errors.email;
+						passwordError.textContent = data.errors.password;
+					}
+
+					if (data.user) {
+						location.assign('/');
+						console.log("user logged in ");
+					}
+
+				}
+				catch (err) {
+					console.log(err);
+				}
+
+
+			})
+		</script>
+	
+	
+	
+	
+		<script src="/login2/vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="/login2/vendor/animsition/js/animsition.min.js"></script>
+		<script src="/login2/vendor/bootstrap/js/popper.js"></script>
+		<script src="/login2/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/login2/vendor/select2/select2.min.js"></script>
+		<script src="/login2/vendor/daterangepicker/moment.min.js"></script>
+		<script src="/login2/vendor/daterangepicker/daterangepicker.js"></script>
+		<script src="/login2/vendor/countdowntime/countdowntime.js"></script>
+		<script src="/login2/js/main.js"></script>
+
+	<%- include('partials/boot-footer') %>

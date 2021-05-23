@@ -1,0 +1,82 @@
+<%- include('partials/boot-header') %> 
+
+
+     
+<div class="program-background" >
+
+
+    <div id="ind" class="index">
+        <div id="changeFocus"></div>
+        <div class="popup-form">
+            <h4 class="addQ_ addqpos" style="top:auto;"><span class="btnSize btn" id="addQ" onclick=openFun() style=" padding: 5px 8px;">Add Question</span></h4>
+            <%- include('partials/popupForm') %>
+                <!-- ################################################### -->
+    
+    
+                <!-- ######################################################### -->
+    
+        </div>
+    <div class="strip29"></div>
+        <div class="main-box">
+            <div class="circle-bg" ></div>
+    
+            <div class="topic1">
+                <h1 style="color: hotpink;">Topics</h1>
+            </div><br>
+    
+            <div class="topic-content">
+                <div class="pro">
+                    <%topics.forEach(element=> { %>
+    
+                        <ul class="question">
+                            <a href="/index/<%= element.topicTitle %>" class="topic" style="display: block;"
+                                onclick="getTopic(this);">
+                                <%= element.topicTitle %>
+                            </a>
+                        </ul>
+                        <br>
+                        <% }); %>
+                </div>
+            </div>
+        </div>
+        <div class="strip29"></div>
+    
+        <!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    
+        <script>
+
+
+
+
+
+            async function getTopic(id) {
+                const topic = id.innerText;
+                const form = document.querySelector('form');
+
+
+
+                //get topic
+                try {
+                    const res = await fetch('/index', {
+                        method: 'POST',
+                        body: JSON.stringify({ topic }),
+                        headers: { 'Content-Type': 'application/json' }
+                    })
+
+
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+
+
+        </script>
+    
+    
+    </div>
+
+
+</div>
+
+
+<%- include('partials/boot-footer') %> 

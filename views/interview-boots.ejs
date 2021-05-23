@@ -1,0 +1,86 @@
+<%- include('partials/boot-header') %>
+
+    <!-- <main class="page registration-page">
+        <section class="clean-block clean-form dark"></section>
+    </main> -->
+    <div class="team-boxed" style="background-image: url('http://www.iitg.ac.in/pplab/dpatd/img/5.jpg');background-repeat: no-repeat; background-size: cover; /*background-image: linear-gradient(282deg, #0093E9 0%, #80D0C7 100%);*/ ">
+        <div id="changeFocus" style="height: 113%;"></div>
+        <%- include('partials/popupExperience') %>
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Companies</h2>
+                <!-- <p class="text-center">abcd</p> -->
+
+            </div>
+           
+            <div class="row">
+
+                                <div class="l-1" >
+                                
+                                    <div class="career__section">
+                                        <div class="partners__description">
+                                            <div class="partners__companies">
+                                
+                                                <a href="/interview/google"><span onclick="getID(this)" ;
+                                                        class="partners__companies-icon companies google "></span></a>
+                                                <a href="/interview/amazon"><span onclick="getID(this)" ;
+                                                        class="partners__companies-icon companies amazon "></span></a>
+                                                <a href="/interview/microsoft"><span onclick="getID(this)" ;
+                                                        class="partners__companies-icon companies microsoft "></span></a>
+                                                <a href="/interview/flipkart"><span onclick="getID(this)" ;
+                                                        class="partners__companies-icon companies flipkart "></span></a>
+                                                <a href="/interview/goldman"><span onclick="getID(this)" ;
+                                                        class="partners__companies-icon companies goldman"></span></a>
+                                                <a href="/interview/walmart"><span onclick="getID(this)" ;
+                                                        class="partners__companies-icon companies walmart "></span></a>
+                                                <a href="/interview/ola"><span onclick="getID(this)" ;
+                                                        class="partners__companies-icon companies ola "></span></a>
+                                                <a href="/interview/uber"> <span onclick="getID(this)" ;
+                                                        class="partners__companies-icon companies uber "></span></a>
+                                
+                                                <script>
+                                                    const getID = async (id) => {
+                                                        const companyName = id.classList[2];
+                                                        const c_name = companyName.charAt(0).toUpperCase() + companyName.slice(1);
+                                                        // console.log(companyName,c_name);
+                                                        try {
+
+                                                            const res = await fetch('/interview', {
+                                                                method: "POST",
+                                                                body: JSON.stringify({ c_name }),
+                                                                headers: { 'Content-Type': 'application/json' }
+
+                                                            })
+
+                                                        } catch (error) {
+                                                            console.log(error);
+                                                        }
+
+                                                    }
+                                                </script>
+                                
+                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="team-boxed">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-12 ">
+<!-- /////////////////////////////////////////// -->
+
+ 
+<!-- ///////////////////////////////////////////// -->
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <%- include('partials/boot-footer') %>

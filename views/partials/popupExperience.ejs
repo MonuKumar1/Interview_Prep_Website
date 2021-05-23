@@ -1,0 +1,153 @@
+<div class="addExp">
+    <h4 class="addQ_" id="addQpos"><span class="btnSize btn" id="addQ" onclick=openFun() style=" padding: 5px 8px;">Add Experience</span></h4>
+    <div class="popupform" id='pop'>
+        <div id="my-form" class="modal" style="top: 4%;">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <span class="close" onclick=closeFun()>&times;</span>
+                        <h4>Add Experience</h4>
+
+                        <!-- action="/interview/add-exp" method="POST" enctype="multipart/form-data" -->
+
+
+                        <form id="addEx">
+                            <input type="text" name="name" required class="username form-control" placeholder="Name" />
+
+                            <h5 class="selectImage">Upload image:</h5>
+                            <input type="file" class="username form-control" id="img" name="image" accept="image/*">
+
+                            <select id="options" type="text" name="company" required class="username form-control">
+                                <option value="" hidden>--Select Company--</option>
+                                <option value="Google">Google</option>
+                                <option value="Amazon">Amazon</option>
+                                <option value="Microsoft">Microsoft</option>
+                                <option value="Flipkart">Flipkart</option>
+                                <option value="Goldman">Goldman</option>
+                                <option value="Walmart">Walmart</option>
+                                <option value="Ola">Ola</option>
+                                <option value="Uber">Uber</option>
+                            </select>
+
+                            <!-- <textarea name="shortDis" id="" placeholder="short discription"></textarea> -->
+                            <textarea type="text" name="shortDics" class="username form-control" id=""
+                                placeholder="short discription"></textarea>
+                            <input type="text" name="docLink" required class="username form-control"
+                                placeholder="Link" />
+
+                            <button class="btn login" onclick=uplFun();>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //////////////////////////////// -->
+
+
+        <div class="upload drop" id="up">
+            <div class="text text-upload">Saving</div>
+            <svg class="progress-wrapper" width="300" height="300">
+                <circle class="progress" r="115" cx="150" cy="150"></circle>
+            </svg>
+            <svg class="check-wrapper" width="130" height="130">
+                <polyline class="check" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+            </svg>
+        </div>
+
+
+
+
+
+
+
+        <script>
+            // ####################################################################################################
+
+            const form = document.querySelector('form');
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name = form.name.value;
+                const docLink = form.docLink.value;
+                const shortDics = form.shortDics.value;
+                const company = form.company.value;
+                const file = document.getElementById("img").files[0];
+
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('image', file);
+                formData.append('company', company);
+                formData.append('shortDics', shortDics);
+                formData.append('docLink', docLink);
+
+                const res = await fetch('/interview/add-exp', {
+                    method: 'POST',
+                    body: formData
+                });
+                const stat = await res.json();
+                console.log('1', stat);
+                if (stat.done.length > 0) {
+                    document.getElementById('up').classList.remove("drop");
+                    document.getElementById('up').classList.add("done");
+                    setTimeout(() => {
+                        clearInterval(myVar);
+                        document.getElementById('up').style.zIndex = "8";
+                        document.getElementById('up').classList.add("drop");
+                        document.getElementById('up').style.display = "none";
+                        document.getElementById('addEx').reset();
+                    }, 2000);
+                }
+
+            });
+
+            // ######################################################################################################
+
+            const uplFun = () => {
+
+                document.getElementById('up').style.zIndex = "12";
+                document.getElementById('up').style.display = "flex";
+
+                myVar();
+                // setTimeout(() => {
+                //     document.getElementById('up').classList.remove("drop");
+                // }, 3000);
+
+            };
+
+
+            const myVar = setInterval(() => {
+
+                setTimeout(() => {
+                    document.getElementById('up').classList.remove("drop");
+                }, 3000)
+
+                setTimeout(() => {
+                    document.getElementById('up').classList.add("drop");
+                }, 10)
+            }, 3010)
+
+
+            // ######################################################################################################
+            const openFun = function () {
+
+                document.getElementById("my-form").style.display = "block";
+                document.getElementById("addQ").style.zIndex = "0";
+                document.getElementById("changeFocus").style.zIndex = "5";
+                document.getElementById("changeFocus").style.backgroundColor = "rgba(0,0,0,.7)";
+
+            };
+
+            const closeFun = function () {
+                document.getElementById("my-form").style.display = "none";
+                document.getElementById("changeFocus").style.zIndex = "-5";
+                document.getElementById("changeFocus").style.backgroundColor = "transparent";
+                document.getElementById("addQ").style.zIndex = "10";
+
+            };
+
+        </script>
+
+    </div>
+</div>
+    

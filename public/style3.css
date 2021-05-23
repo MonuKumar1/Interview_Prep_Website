@@ -1,0 +1,233 @@
+.l-1{
+  width:   85%;
+  margin:6% auto 10% ;
+  background-color: white;
+  border-radius: 20px;
+}
+
+/* .partners__companies{
+    width:   83%;
+} */
+
+.partners__companies {
+       /*1060px;*/
+  /* height: 400px; */
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 5%px 6%; */
+}
+
+.partners__companies a{
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-right: 8%;
+    width: 25%;
+}
+
+@media (max-width: 767px) {
+  .partners__companies a {
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 47%;
+     margin:auto;
+  }
+}
+
+@media (max-width: 570px) {
+  .partners__companies a {
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 56%;
+     margin:auto;
+  }
+
+  .l-1{
+      width: 70%;
+  }
+
+}
+
+
+.partners__companies-icon {
+    margin: 1rem auto;
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: -webkit-transform 0.8s;
+    transition: transform 0.8s;
+    transition: transform 0.8s, -webkit-transform 0.8s;
+}
+
+.company {
+    background-size: 11228px 70px;
+    /* background-size: 5614px 37px; */
+    background-image: url(https://assets.scaler.com/assets/techversity/png/companies-1f151e12b46b67cdccf51b446e2de31795d96b5eca6d40a395b75d46eb08ef6f.png);
+    background-repeat: no-repeat;
+    display: block;
+    transition: transform .5s ease;
+    
+}
+
+
+.companies {
+    background-size: 11228px 74px;
+    /* background-size: 5614px 37px; */
+    background-image: url(https://assets.scaler.com/assets/techversity/png/companies-1f151e12b46b67cdccf51b446e2de31795d96b5eca6d40a395b75d46eb08ef6f.png);
+    background-repeat: no-repeat;
+    display: block;
+    transition: transform .5s ease;
+    
+}
+.companies:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
+.google {
+    height: 72px;
+    width: 141px;
+    background-position: -2417px;
+  
+}
+
+
+.amazon {
+    height: 72px;
+    width: 141px;
+    background-position: -5514px;
+}
+.microsoft{
+    height: 72px;
+    width: 157px;
+    background-position: -2969px;
+}
+.flipkart{
+    height: 72px;
+    width: 174px;
+    background-position: -1973px;
+}
+
+.goldman {
+    height: 72px;
+    width: 142px;
+    background-position: -2273px;
+}
+.walmart {
+    height: 72px;
+    width: 177px;
+    background-position: -5061px;
+}
+.uber {
+    height: 72px;
+    width: 109px;
+    background-position: -4956px;
+}
+.ola {
+    height: 72px;
+    width: 123px;
+    
+    background-position: -3586px;
+}
+
+
+/* ################################################################# */
+
+#cpm_title{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    
+}
+
+@media (max-width: 650px) {
+  #cpm_title{
+      top: 10%;
+      font-weight:100;
+      font-size: 1.5rem;
+  }
+}
+
+.testimonial_parent{
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* width: 82%; */
+    margin-left: 7%;
+    
+}
+
+.testimonial_body{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 0.8rem;
+    border: solid 0.1rem #d6dee5;
+    width: 38rem;
+    padding: 2rem;
+    margin: 2rem;
+    transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+.testimonial_parent h2{
+    font-size: 14px;
+}
+
+/* .testimonial_image  {
+    
+    width: 9rem;
+    object-fit: cover;
+    height: 9rem;
+} */
+
+.testimonial_image img {
+    border-radius: 50%;
+    width: 9rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 9rem;
+}
+
+.testimonial_desc a{
+    
+    font-size: 15px;
+    color: chocolate;
+}
+.testimonial_desc a:hover{
+    
+    color:crimson;
+    text-decoration: underline;
+}
+
+.testimonial_name h2 {
+    
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #021028;
+    white-space: initial;
+}
+
+
+
+.testimonial_info{
+    display: flex;
+}
+        
+.container2{
+    width: 100%;
+    height: 114%;
+
+    background-image: url('http://www.iitg.ac.in/pplab/dpatd/img/5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-div{
+    width: 100%;
+    position: absolute;
+    top: 120%;
+}

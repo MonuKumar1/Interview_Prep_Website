@@ -1,0 +1,100 @@
+    
+    
+      
+
+    <div class="popupform" id='pop'>  
+        <div id="my-form" class="modal">
+            
+            <div class="modal-dialog">
+        
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <span  class="close" onclick=closeFun()>&times;</span>
+                        <h4>Add Question</h4>
+                        
+                        <form id="addQ_form">
+                            <input type="text" name="title" required class="username form-control" placeholder="Title" />
+                            <select id="options" type="text" name="topic" required class="username form-control" >
+                                    <option value="" hidden>--Select Topic--</option>
+                                <% topics.forEach(element=> {  %>
+                                    <% var i=2 %> 
+                                    <option value="<%=i%>"><%= element.topicTitle %></option> 
+                                    <% i += 1 %> 
+                                <% }); %> 
+                            </select>
+                            <input type="text" name="link" required class="username form-control" placeholder="Link" />
+                            
+                            <button class="btn login" >Submit</button>
+                           
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            
+
+
+            const openFun = function () {
+                document.getElementById("my-form").style.display = "block";
+                document.getElementById("addQ").style.zIndex = "0";
+                document.getElementById("changeFocus").style.zIndex = "5";
+                document.getElementById("changeFocus").style.backgroundColor = "rgba(0,0,0,.7)";
+
+            };
+
+            const closeFun = function(){
+                document.getElementById("my-form").style.display = "none";
+                document.getElementById("changeFocus").style.zIndex = "-5";
+                document.getElementById("changeFocus").style.backgroundColor = "transparent";
+                document.getElementById("addQ").style.zIndex = "10";
+
+            };  
+
+        
+            
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', async (e) => {
+
+                        e.preventDefault();
+                        const addQ_title = form.title.value;
+                        const addQ_link = form.link.value;
+
+                        const option = document.getElementById("options");
+                        const str = option.options[option.selectedIndex].text;
+                        const addQ_topic = str;
+                        // console.log(addQ_topic);
+                        
+                       
+
+                        document.getElementById("addQ_form").reset();
+
+                       
+
+                        try {
+                            
+                            const res = await fetch('/addq',{
+                                method:'POST',
+                                body:JSON.stringify({addQ_title,addQ_topic,addQ_link}),
+                                headers:{'Content-Type':'application/json'}
+                            })
+                            const data = await res.json()
+                            console.log(data);
+                            if(data.alert_.length>0){
+                                alert(data.alert_);
+                            }
+
+                        
+                        } catch (error) {
+                            console.log(error);
+                        }
+        
+            });
+
+        </script>
+
+    </div>

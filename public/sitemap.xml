@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/login</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/signup</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview/google</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview/amazon</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview/microsoft</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview/flipkart</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview/goldman</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview/walmart</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview/ola</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://interview-tracker-durgesh.herokuapp.com/interview/uber</loc>
+  <lastmod>2021-02-03T18:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

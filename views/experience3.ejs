@@ -1,0 +1,57 @@
+<%- include('partials/boot-header') %> 
+
+<div class="container2" >
+
+    <a href="/interview"> <i class="fa fa-arrow-left" style="font-size:48px;  margin-top: 20px;"></i></a>
+    <div id="changeFocus" style="height: 100%;"></div>
+    <%- include('partials/popupExperience') %>
+    
+        <!-- <h1 class="middle" id="cpm_title" ><span id="c_name">Company </span> Interview Experiences</h1> -->
+        <div class="testimonial_parent ">
+    
+            <% items.forEach(function(element) { %>
+                <div class="testimonial_body">
+                    <div class="testimonial_info">
+                        <div class="testimonial_image">
+                            <img src="data:image/<%=element.image.contentType%>;base64,<%=element.image.data.toString('base64')%>">
+                        </div>
+                        <div class="testimonial_name">
+                            <h2>
+                                <%= element.name %>
+                            </h2><span class="partners__companies-icon company google " style="cursor: text;"></span>
+                        </div>
+    
+                    </div>
+                    <br>
+                    <div class="testimonial_desc">
+                        <h2>
+                            <%= element.shortDics %><a target="_blank" href="<%= element.docLink %>">Read More</a>
+                        </h2>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+
+    
+</div>  
+<div class="footer-div"><%- include('partials/boot-footer') %></div>  
+
+
+                   
+                        
+                       
+                        <script>
+                   
+                            let company = document.getElementById("c_name");
+                            let url = window.location.pathname;
+                            const nameValue = url.split('/')[2];
+                            company.innerText = nameValue.charAt(0).toUpperCase() + nameValue.slice(1);
+                        
+                            let cmp =  document.querySelectorAll("div span.company");
+                            console.log(cmp);
+                            var i;
+                                for (i in cmp) {
+                                    cmp[i].classList.replace("google",nameValue);
+                                }
+                          
+                        </script>

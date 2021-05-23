@@ -1,0 +1,38 @@
+<%- include('partials/boot-header') %>
+
+
+ <div class="program-background" >
+
+    <h2 class="back-index"><a href="/index"><i class="fa fa-arrow-left" style="font-size:48px; "></i></a>
+
+    </h2>
+        <div id="changeFocus"></div>
+        <div class="popup-form">
+            <h4 class="addQ_ addqpos" style="top:auto;"><span class="btnSize btn" id="addQ" onclick=openFun()
+                    style="padding: 5px 8px;">Add Question</a></h4>
+            <%- include('partials/popupForm') %>
+        </div>
+    <div class="strip29"></div>
+    <div class="main-box">
+        <div class="circle-bg"></div>
+        
+        <h2 class="topic2">
+            <%= topiC %>
+        </h2> <br>
+        <div class="topic-content2">
+            <%questions.forEach(element=> { %>
+                <ul class="question2">
+                    <a href="<%= element.link %>" style="display: block;">
+                        <%= element.name %>
+                    </a>
+                </ul>
+                <br>
+                <% }); %>
+        </div>
+    
+    </div>
+    <div class="strip29"></div>
+
+ </div>
+
+<%- include('partials/boot-footer') %>

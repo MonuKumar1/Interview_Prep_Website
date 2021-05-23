@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="robots" content="index,follow">
+    <title>Interview-Tracker | Coding Club IITG |</title>
+    <meta name="description" content="Interview-Tracker - Project by Coding Club IIT Guwahati. An application which store question catagarised by topics and also Read interview experiences, question ahead of time so you can prep with confidence. If you recently interview, Share what it was like. Developed by- Durgesh Kumar Meena">
+    <meta name="keywords" content="Interview-Tracker,interview,tracker,project by coding club,IIT Guwahati,IITG,coding club project">
+    <meta property="og:site_name" content="Interview-Tracker">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://interview-tracker-durgesh.herokuapp.com/">
+    
+    <meta property="og:url" content="https://interview-tracker-durgesh.herokuapp.com/">
+    <meta name="google-site-verification" content="s98deK9tSM43epd00FWezzN-J6eN_i8LBWXw8qzV8yo" />
+    
+    <link rel="icon" type="image/png" href="https://www.iitg.ac.in/upload/favicon.ico" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="/css/smoothproducts.css">
+    <link rel="stylesheet" href="/css/stl5.css">
+    <link rel="stylesheet" href="/css/Team-Boxed.css">
+    <link rel="stylesheet" href="/css/Testimonials.css">
+
+  
+    <link rel="stylesheet" type="text/css" href="/login2/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/login2/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/login2/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="/login2/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="/login2/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="/login2/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="/login2/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/login2/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="/login2/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/login2/css/main.css">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/exp.css">
+    <link rel="stylesheet" href="/style2.css">
+    <!-- <link rel="stylesheet" href="/style3.css"> -->
+    <link rel="stylesheet" href="/uploading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+</head>
+<body>
+        <nav class="navbar navbar-light navbar-expand-lg  bg-white clean-navbar">
+            <div class="container">
+                <a class="navbar-brand  rounded-0  logo" href="/" style="font-weight: 500;">Interview-Tracker</a>
+                <button data-toggle="collapse" class="navbar-toggler" onclick=companyPosition(); data-target="#navcol-1" style="background-color: yellow;">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="/">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/index">Programming</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/interview">Experiences</a></li>
+                        <!-- <li class="nav-item" role="presentation"><a class="nav-link" href="/robotics">Others</a></li> -->
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/#"></a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" ></a></li>
+                                <% if (locals.user){ %>
+                                   
+                                        <li class="welcome nav-item" role="presentation"><span class="abtn nav-link" id="role_" style="padding: 4px 10px"><%= locals.role%></span><%= locals.user.name %></li>
+                                        <li class="nav-item" role="presentation"><a class="nav-link" href="/logout" style="color: dodgerblue;">Log Out</a></li>
+
+                                                    <script>
+                                                        const role = document.getElementById("role_");
+                                                        console.log(1,role);
+                                                        if (role) {
+                                                            console.log(2, role.innerText, role.innerText.toLocaleLowerCase(),role.innerText.toLocaleLowerCase() == "admin");
+                                                            if (role.innerText.toLocaleLowerCase() == "admin") {
+                                                                console.log(3, role.innerText);
+                                                                document.getElementById("role_").classList.replace('abtn', 'bbtn');
+                                                                document.getElementById("role_").outerHTML = document.getElementById("role_").outerHTML.replace(/span/g, "a");
+                                                                document.getElementById("role_").setAttribute('href', "/admin");
+                                                            } else{
+                                                                console.log(4, role.innerText);
+                                                            }
+                                                        }
+
+                                                    </script>
+
+                                <% }else{ %>
+                                        <li class="nav-item" role="presentation"><a class="nav-link" href="/login" style="color: dodgerblue;">Login</a></li>
+                                        <li class="nav-item" role="presentation"><a class="nav-link" href="/signup" style="color: dodgerblue">Signup</a></li>
+                                <% } %>
+
+                    </ul>
+                </div>
+            </div>
+
+            <script>
+                    let url = window.location.pathname;
+                    const nameValue = url.split('/')[2];
+                    const nameVal1 = url.split('/')[1];
+
+                    console.log(1, 'reached');
+                    const companyPosition = function () {
+                        // console.log(nameValue)
+                        if (nameValue) {
+                            // console.log(2, 'worked');
+                            var x = document.getElementById('cpm_title');
+                            if(x){
+                                if (x.style.position == "relative") {
+                                    console.log('relative to absolute')
+                                    x.style.position = "absolute";
+                                }
+                                else {
+                                    console.log('absolute to relative')
+                                    x.style.position = "relative";
+                                }
+                            }
+
+
+                        }
+                        if(nameVal1=="interview"){
+                            var y = document.getElementById("addQpos");
+                            if (y.style.position == "relative") {
+                                // console.log('relative to absolute')
+                                y.style.position = "absolute";
+                            }
+                            else {
+                                console.log('absolute to relative')
+                                // y.style.position = "relative";
+                            }
+                        }
+                        if (nameVal1=="index") {
+                            var z = document.getElementsByClassName("addqpos")[0];
+                            if (z.style.display == "none") {
+                                console.log('show')
+                                z.style.display = "block";
+                            }
+                            else {
+                                console.log('hide')
+                                z.style.display = "none";
+                            }
+
+                            var s = document.getElementsByClassName("back-index")[0];
+                            if(s){
+                                if (s.style.display == "none") {
+                                    console.log('show')
+                                    s.style.display = "block";
+                                }
+                                else {
+                                    console.log('hide')
+                                    s.style.display = "none";
+                                }
+                            }
+                        }
+                        
+
+                    }
+            </script>
+
+        </nav>
+

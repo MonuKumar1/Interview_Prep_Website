@@ -1,0 +1,108 @@
+<%- include('partials/boot-header') %> 
+
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style="background-image: url(&quot;http://www.iitg.ac.in/pplab/dpatd/img/5.jpg&quot;);/*color: rgba(9, 162, 255, 0.15);*/color: rgba(0, 0, 0, 0);">
+            <div class="text">
+                <h2>Welcome to Interview - Tracker</h2>
+                <p>Practice popular DSA&nbsp; questions.<br>&nbsp; Read interview experiences &amp; question&nbsp; ahead&nbsp; of time so you can prep with confidence. If you recently interview, Share what it was like.<br><br></p>
+            <a href="#anchor-feature">  <button class="btn btn-outline-light btn-lg" id="btn-hover" type="button">Learn More</button></a> </div>
+        </section>
+        <section class="clean-block clean-info dark"></section>
+        <section class="clean-block features">
+            <a name="anchor-feature"></a>
+            <div class="container" >
+                <div class="block-heading">
+                    <h2 class="text-info">Features</h2>
+                    <!-- <p>Programming and Interview experience sections</p> -->
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 feature-box" style="padding-left: 65px;">  <i class="fas fa-desktop icon"></i>
+                        <a href="/index" >
+                        <h4 style="color: #20ae06; text-decoration: underline;">Programming</h4>
+                        <p style="color:#212529;">Learn and&nbsp;Practice Programming&nbsp;with&nbsp;Coding&nbsp;Tutorials and&nbsp;Practice Problems. Improve your&nbsp;Programming&nbsp;skills by solving&nbsp;Coding<strong> </strong>Problems&nbsp;of DSA.<br></p>
+                    </a> </div> 
+                    <div class="col-md-4 feature-box" style="padding-left: 65px;"><i class="icon-people icon"></i>
+                        <a href="/interview">
+                        <h4 style="color:#20ae06; text-decoration: underline;">Interview Experiences</h4>
+                       <p style="color:#212529;">Read interview experiences &amp; question&nbsp; ahead&nbsp; of time so you can prep with confidence. If you recently interview, Share what it was like.<br></p>
+                    </a> </div>
+                </div>
+            </div>
+        </section>
+        <section class="clean-block clean-info dark"></section>
+        <section class="clean-block about-us">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Interview Experiences</h2>
+                    <p>Read interview experiences&nbsp; ahead&nbsp; of time so you can prep with confidence. If you recently interview, Share what it was like.<br><br></p>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="/img/avatars/avatar1.jpg">
+                            <div class="card-body info">
+                                <h4 class="card-title">John Smith</h4>
+                                <p class="card-text">Recently Google conducted an online coding round for its step internship in Singapore. About step internship: STEP (Student Training in Engineering Program)…<a target="_blank" href="https://www.geeksforgeeks.org/google-step-intern-coding-challenge-experience/">Read More</a></p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div> -->
+                                        <div class="col-sm-6 col-lg-4">
+                                            <div class="card clean-card text-center"><img style="border-radius: 50%; padding :8%" class="card-img-top w-100 d-block" src="data:image/<%=items[0].image.contentType%>;base64,<%=items[0].image.data.toString('base64')%>">
+                                                <div class="card-body info">
+                                                    <h4 class="card-title"><%= items[0].name %></h4>
+                                                    <p class="card-text">Recently Google conducted an online coding round for its step internship in Singapore.
+                                                        About step internship: STEP (Student Training in Engineering Program)…<a target="_blank"
+                                                            href="https://www.geeksforgeeks.org/google-step-intern-coding-challenge-experience/">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img style="border-radius: 50%; padding :5%" class="card-img-top w-100 d-block" src="data:image/<%=items[1].image.contentType%>;base64,<%=items[1].image.data.toString('base64')%>">
+                            <div class="card-body info">
+                                <h4 class="card-title"><%= items[1].name %></h4>
+                                <p class="card-text">The Google online challenge 2020 for summer internships 2021 was held on Sept 26. It was a 60-minute online test having 2 questions to code.… <a target="_blank" href="https://www.geeksforgeeks.org/google-online-challenge-for-summer-internship-2021/">Read More</a></p>
+                                <!-- <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img style="border-radius: 50%; padding :5%" class="card-img-top w-100 d-block" src="data:image/<%=items[2].image.contentType%>;base64,<%=items[2].image.data.toString('base64')%>">
+                            <div class="card-body info">
+                                <h4 class="card-title"><%= items[2].name %></h4>
+                                <p class="card-text">I was contacted by a Google recruiter a few months ago, that my resume has been shortlisted for the Software Engineer 2021 New Grad Role.… <a target="_blank" href="https://www.geeksforgeeks.org/google-interview-experience-for-software-engineer-2021-new-grad/">Read More</a></p>
+                                <!-- <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div> -->
+                            </div>
+                        </div>
+                    </div>
+<!-- ///////////////////////////////////// -->
+
+                            <!-- <% items.forEach(function(element) { %>
+                                <div class="testimonial_body">
+                                    <div class="testimonial_info">
+                                        <div class="testimonial_image">
+                                            <img src="data:image/<%=element.image.contentType%>;base64,<%=element.image.data.toString('base64')%>">
+                                        </div>
+                                        <div class="testimonial_name">
+                                            <h2>
+                                                <%= element.name %>
+                                            </h2><span class="partners__companies-icon company google " style="cursor: text;"></span>
+                                        </div>
+                            
+                                    </div>
+                                    <br>
+                                    <div class="testimonial_desc">
+                                        <h2>
+                                            <%= element.shortDics %><a target="_blank" href="<%= element.docLink %>">Read More</a>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <% }) %> -->
+
+<!-- //////////////////////////////////////// -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/boot-footer') %>

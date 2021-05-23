@@ -1,0 +1,322 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* body{
+  margin: 20px 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #e1e6f3;
+  background-image: url(http://www.iitg.ac.in/acad/slider_images/2.jpg); 
+  height: 600px; 
+  background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+} */
+.container-login100{
+    background-image: url(http://www.iitg.ac.in/acad/slider_images/2.jpg); 
+  /* height: 600px;  */
+  background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+/* h1, h2, h3, h4, ul, li, a, p, input, label, button, div{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+} */
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* a {
+	font-family: Poppins-Regular;
+	font-size: 24px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+} */
+
+a:focus {
+	outline: none !important;
+}
+
+a:hover {
+	text-decoration: none;
+  color: #57b846;
+}
+
+
+
+/* nav{
+  
+  background-color: #0093E9;
+  background-image: linear-gradient(282deg, #0093E9 0%, #80D0C7 100%);
+  padding: 15px 25px 20px 40px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom: 0px;
+  
+} */
+/* nav ul{
+  display: flex;
+  align-items: center;
+}
+nav ul li.welcome{
+  text-align:center;
+}
+nav li{
+  margin-left: 20px;
+}
+nav li a{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+} */
+/* .btn{
+  border-radius: 36px;
+  background: #FEE996;
+} */
+form h2{
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px 33px;
+}
+
+
+form{
+  /* width: 360px; */
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+}
+
+/* #addQ_form form{
+  
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+} */
+
+.addExp form{
+  padding: 20px;
+  margin: 30 auto;
+}
+
+input{
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+label{
+  display: block;
+  margin: 20px 0 10px;
+}
+
+button{
+  /* margin-top: 30px; */
+  border-radius: 36px;
+  background: #FEE996;
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.error{
+  color: #ff0099;
+  margin: 1px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+header{
+  display: flex;
+  align-items: center;
+}
+header img{
+  width: 250px;
+  margin-right: 40px;
+}
+header h2{
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+header h3{
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+/* header .btn{
+  margin-top: 20px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+} */
+
+/* footer{
+  text-align: center;
+  
+  margin-top: 3%;
+  color: #aaa;
+} */
+
+.middle{
+  text-align: center;
+}
+
+/* .Que{
+  padding-left: 45%;
+   margin-top: 80px;
+   
+}
+.Que a{
+  color: #ad1899;
+}
+
+
+
+.index ul a{
+  color: rgb(12, 153, 153);
+  font-weight: bolder;
+  
+} 
+
+.topic1{
+  margin:auto;
+  text-align: center;
+  background-color: rgba(138, 135, 135, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  background-image: url(https://assets.scaler.com/assets/techversity/svg/experienced_story_highlight_purple-cf4de18773e91a19aa4d3fea0de8fe48e75c5c271df0803c414c0bd22c8bd73b.svg.gz);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topic-content{
+  margin:auto;
+  text-align: center;
+  background-color: rgba(138, 135, 135, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+
+  
+}
+.question{
+  padding: 45px 0;
+  border-left: 5px solid transparent;
+  border-radius: 15px;
+  display: block;
+  background-image: url(https://assets.scaler.com/assets/techversity/svg/experienced_story_highlight_green-b2a9c032997ce6b80f459f52a8ec4e7f350eb4ae4ea8b8c99f58c709fb53d643.svg.gz);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.question:hover{
+  background-color: rgba(250, 250, 250, 0.9);
+  border-left-color: #fec601;
+  background-image: url(); 
+  
+}
+
+.back-index{
+  position: absolute;
+  top: 15%;
+  left: 3%;
+}
+
+
+.topic2{
+  color: rgb(12, 153, 153);
+  margin:auto;
+  text-align: center;
+  background-color: rgba(138, 135, 135, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  background-image: url(https://assets.scaler.com/assets/techversity/svg/experienced_story_highlight_green-b2a9c032997ce6b80f459f52a8ec4e7f350eb4ae4ea8b8c99f58c709fb53d643.svg.gz);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topic-content2{
+  margin:auto;
+  text-align: center;
+  background-color: rgba(138, 135, 135, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+
+  
+}
+.question2{
+  padding: 45px 0;
+  border-left: 5px solid transparent;
+  border-radius: 15px;
+  display: block;
+  background-image: url(https://assets.scaler.com/assets/techversity/svg/experienced_story_highlight_red-add39818c6b472c485706db9f8b4168098fb22d623e2f269cce9f20c94c939f0.svg.gz);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.question2:hover{
+  background-color: rgba(250, 250, 250, 0.9);
+  border-left-color: #fec601;
+  background-image: url(); 
+  
+}
+.question2 a{
+  color: rgba(36, 46, 42, 0.986);
+  font-weight: bolder;
+} */
+
+/* .main-box{
+  padding: 30px 30px 30px 30px;
+  margin: auto;
+  width: 58%;
+  border-radius: 30px;
+  background-color: azure;
+
+} */
+
+/* .program-background{
+  position: absolute;
+  top: ;
+
+} */
+
+/* .navbar-toggler{
+
+} */

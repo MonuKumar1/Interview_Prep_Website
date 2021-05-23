@@ -1,0 +1,128 @@
+<%- include('partials/boot-header') %>
+
+	
+	<div class="limiter signup-old">
+		<div class="container-login100">
+			<div class="wrap-login100" >
+				<div class="login100-form-title" style="background-image: url(/login2/images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Sign Up
+					</span>
+				</div>
+
+				<form class="login100-form validate-form">
+					<div class="wrap-input100  m-b-26" data-validate="Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="name" placeholder="Enter username">
+						<div class="name error"></div>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100  m-b-26" >
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="email" placeholder="Enter email-id">
+						
+						<span class="focus-input100"></span>
+						<div class="email error"></div>
+					</div>
+
+					<div class="wrap-input100  m-b-18" >
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="password" placeholder="Enter password">
+						
+						<span class="focus-input100"></span>
+						<div class="password error"></div>
+					</div>
+
+					
+
+
+					<!-- <div class="flex-sb-m w-full p-b-30">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+						</div>
+
+						<div>
+							<a href="#" class="txt1">
+								Forgot Password?
+							</a>
+						</div>
+					</div> -->
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Sign Up
+						</button>
+					</div>
+						<div class="txt1">
+							Already have an account? <a href="/login" class="txt2" style="color:#1192dd ; font-size: medium;">Login</a>
+						</div>
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<script>
+		const form = document.querySelector('form');
+		const nameError = document.querySelector('.name.error');
+		const emailError = document.querySelector('.email.error');
+		const passwordError = document.querySelector('.password.error');
+
+
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+
+			nameError.textContent = '';
+			emailError.textContent = '';
+			passwordError.textContent = '';
+
+			const name = form.name.value;
+			const email = form.email.value;
+			const password = form.password.value;
+
+			try {
+				const res = await fetch('/signup', {
+					method: 'POST',
+					body: JSON.stringify({ name, email, password }),
+					headers: { 'Content-Type': 'application/json' }
+				});
+
+				const data = await res.json();
+				if (data.errors) {
+					nameError.textContent =  data.errors.name;
+					emailError.textContent = data.errors.email;
+					passwordError.textContent = data.errors.password;
+				}
+
+				if (data.user) {
+					location.assign('/');
+				}
+
+			}
+			catch (err) {
+				console.log(err);
+			}
+
+
+		})
+	</script>
+
+
+
+	<script src="/login2/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/login2/vendor/animsition/js/animsition.min.js"></script>
+	<script src="/login2/vendor/bootstrap/js/popper.js"></script>
+	<script src="/login2/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/login2/vendor/select2/select2.min.js"></script>
+	<script src="/login2/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/login2/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="/login2/vendor/countdowntime/countdowntime.js"></script>
+	<script src="/login2/js/main.js"></script>
+
+<%- include('partials/boot-footer') %> 

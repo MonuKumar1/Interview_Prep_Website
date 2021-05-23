@@ -1,0 +1,183 @@
+.Que {
+  padding-left: 45%;
+  margin-top: 80px;
+}
+
+.Que a {
+  color: #ad1899;
+}
+
+.index ul a {
+  color: rgb(12, 153, 153);
+  font-weight: bolder;
+}
+
+
+
+.back-index {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+}
+
+.topic1 {
+  margin: auto;
+  text-align: center;
+  background-color: rgba(138, 135, 135, 0.15);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  background-image: url(https://assets.scaler.com/assets/techversity/svg/experienced_story_highlight_purple-cf4de18773e91a19aa4d3fea0de8fe48e75c5c271df0803c414c0bd22c8bd73b.svg.gz);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topic2 {
+  color: rgb(12, 153, 153);
+  margin: auto;
+  text-align: center;
+  background-color: rgba(138, 135, 135, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  background-image: url(https://assets.scaler.com/assets/techversity/svg/experienced_story_highlight_green-b2a9c032997ce6b80f459f52a8ec4e7f350eb4ae4ea8b8c99f58c709fb53d643.svg.gz);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.topic-content {
+  margin: auto;
+  text-align: center;
+  background-color: rgba(138, 135, 135, 0.15);
+  /*padding: 30px;*/
+  border-radius: 20px;
+  width: 90%;
+}
+.topic-content2 {
+  margin: auto;
+  text-align: center;
+  background-color: rgba(138, 135, 135, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+}
+
+.question {
+  padding: 30px 0;
+  /*border-left: 5px solid transparent;*/
+  border-radius: 15px;
+  display: block;
+  background-image: url(https://assets.scaler.com/assets/techversity/svg/experienced_story_highlight_green-b2a9c032997ce6b80f459f52a8ec4e7f350eb4ae4ea8b8c99f58c709fb53d643.svg.gz);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.question2 {
+  padding: 30px 0;
+  border-left: 5px solid transparent;
+  border-radius: 15px;
+  display: block;
+  background-image: url(https://assets.scaler.com/assets/techversity/svg/experienced_story_highlight_red-add39818c6b472c485706db9f8b4168098fb22d623e2f269cce9f20c94c939f0.svg.gz);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.question:hover {
+  background-color: rgba(250, 250, 250, 0.9);
+  border-left-color: #fec601;
+  background-image: url();
+}
+.question2:hover {
+  background-color: rgba(250, 250, 250, 0.9);
+  border-left-color: #fec601;
+  background-image: url();
+}
+
+.question a {
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.question2 a {
+  color: rgba(36, 46, 42, 0.986);
+  font-weight: normal;
+  font-size: 0.9rem;
+
+}
+@media (min-width: 576px) {
+  .question2 a {
+    font-weight: bolder;
+    font-size: 1.0rem;
+  }
+
+  .question a{
+    font-weight: bolder;
+    font-size: 1.0rem;
+  }
+}
+
+.main-box {
+ 
+  padding: 30px 20px 30px 20px;
+  margin: auto;
+  
+  
+  width: 95%;
+  border-radius: 30px;
+  background-color: azure;
+}
+
+.strip29{
+  width: 100%;
+  height: 6.5rem;
+}
+
+@media (min-width: 576px) {
+  .main-box {
+    width: 60%;
+  }
+}
+
+@media (min-width: 576px) {
+  .topic1 {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .topic-content {
+    padding: 30px;
+  }
+}
+/* 
+@media (min-width: 576px) {
+  .question {
+    padding: 30px;
+  }
+} */
+
+/* @media (min-width: 300px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+} */
+
+.program-background{
+  background-image: url('http://www.iitg.ac.in/pplab/dpatd/img/5.jpg');
+  /*color: rgba(9, 162, 255, 0.15);*/
+  color: rgba(0, 0, 0, 0,0,05);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#btn-hover:hover{
+  color: black;
+}
+
+.popup-form{
+  position:absolute;
+  top: 16%;
+  left: 80%;
+}
+
+/* #addqq{
+  background-color: yellow;
+} */
