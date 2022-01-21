@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
-const mongoURI = '';
+const dotenv = require('dotenv')
+
+dotenv.config();
+const mongoURI = process.env.MongoURI;  // create .env file storing yout mongoURI secrete
 
 const InitiateMongoServer = async()=>{
     try{
