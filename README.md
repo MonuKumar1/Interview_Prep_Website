@@ -1,6 +1,6 @@
 # [**InterviewTracker**](https://interview-tracker-durgesh-monu.herokuapp.com/)
 
-Interview Tracker - Project by Coding Club IIT Guwahati.
+Interview Tracker - Project under Coding Club IIT Guwahati.
 An application which store question categorized by topics and also  you can read interview experiences and important questions ahead of time so you can prepare with confidence. If you have gone through a recent interview, You can share it with us.
 
    It is build with [**Nodejs**](https://nodejs.org), [**Express**](https://expressjs.com) and [**MongoDB**](https://www.mongodb.com/) used as database.
